@@ -1,0 +1,229 @@
+:root.dark {
+    --dark1: #665a5a;
+    --dark2: #19191c;
+    --dark3: #000000;
+    --markColor: #000000;
+    --fontColor: #81adff;
+    --btnColor: #1d2129;
+    --btnHover: #222224;
+    --readBtn: #8195ba;
+  }
+  
+  :root {
+    --dark1: #A0BFE0;
+    --dark2: #7895CB;
+    --dark3: #5f86d1;
+    --highlight: #97b6f0;
+    --markColor: #000000;
+    --fontColor: #000000;
+    --btnColor: #697ea8;
+    --btnHover: #657eab;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pangolin', cursive;
+    color: var(--fontColor);
+  }
+  
+  body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark2);
+  }
+  
+  #toggle {
+    cursor: pointer;
+    width: 50px;
+    height: 30px;
+    background-color: var(--highlight);
+    display: block;
+    border-radius: 100px;
+    position: relative;
+  
+  }
+  
+  .switch {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc(50% - 3px);
+    height: calc(100% - 8px);
+    background-color: #445a83;
+    border-radius: 30px;
+    transition: left 0.5s ease;
+  }
+  
+  .switch.darkMode {
+    left: calc(50% - 2px);
+    background-color: rgb(0, 0, 0);
+  }
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark3);
+    position: fixed;
+    top: 0px;
+    padding: 0 12.5%;
+    width: 100vw;
+    height: 4.5rem;
+  }
+  .nav h1 {
+    margin-right: auto;
+  }
+  h4{
+    font-size: 20px;
+  }
+  
+  .board{
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    top: calc(50% - calc(min(75vw,350px)/2.3) );
+    left: calc(50% - calc(min(75%,350px)/2));;
+    width: min(75%,350px);
+    height: min(75vw,350px);
+    border: 2px solid black;
+  }
+  .tile{
+    color: var(--markColor);
+    cursor: pointer;
+    font-size: 4rem;
+    background-color: var(--dark1);
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    width: 33.33333%;
+    height: 33.34%;
+  
+  }
+  .display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 6.5rem auto;
+    width: min(70%,300px);
+    height: 80px;
+    border: 3px solid var(--dark1);
+    border-radius: 15px;
+    background-color: var(--dark3);
+  }
+  .reset{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 130px;
+    border: 2px solid var(--dark1);
+    background-color: var(--dark3);
+    border-radius: 13px;
+    position: fixed;
+    bottom: 10%;
+    left: calc(50% - 50px);
+  }
+  .reset:hover{
+    width: 130px;
+    height: 52px;
+    border-color: var(--highlight);
+  }
+  
+  .prompt {
+    z-index: 50;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    backdrop-filter: blur(4px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: display 0.2s ease;
+  }
+  .promptBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+    background-color: var(--dark3);
+    border-radius: 30px;
+    position: relative;
+  }
+  
+  .promptBox >input {
+    border-radius: 13px;
+    padding: 8px 5px;
+    color: #000000;
+    font-size: 15px;
+    width: 20vw;
+    margin-bottom: 10px;
+  }
+  .promptBox div{
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    align-items: center;
+    transition: width 0.2s ease;
+    transition: height 0.2s ease;
+  }
+  .promptBox > div > label{
+  margin-right: auto;
+  }
+  /* .promptBox > div > input{
+    width: 25px;
+    height: 25px;
+    cursor:promptBox
+  } */
+  
+  .promptBox >div:last-of-type{
+    /*  border: 2px solid white; */
+     width: 40%;
+     background-color: var(--dark2);
+     border-radius: 20px;
+     margin: auto;
+     display: flex;
+     justify-content: center;
+   }
+   .promptBox >div:last-of-type:hover{
+     width: 40.5%;
+     height: 3.1rem;
+     background-color: var(--btnHover);
+     cursor: pointer;
+   
+    }
+  
+    .copyright{
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--dark2);
+    }
+  
+    @media only screen and (max-width:900px) {
+     
+      .promptBox input {
+        
+        width: 40vw;
+        
+      }
+    }
+    
+    @media only screen and (max-width:500px) {
+      
+      .promptBox input {
+        
+        width: 60vw;
+        
+      }
+    }
