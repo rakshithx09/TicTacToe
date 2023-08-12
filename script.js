@@ -35,9 +35,7 @@ const gameBoard = (() => {
     const setMark = (element, i, j, mark, rounds) => {
         element.textContent = mark;
         board[i][j] = mark;
-        console.log(board);
         winner = gameController.checkWinner(board);
-        console.log('Winner:', winner);
 
         if (winner === undefined) {
 
@@ -56,7 +54,6 @@ const gameBoard = (() => {
         gameController.checkWinner(board);
         
         display.textContent = `${gameController.getCurrentPlayer(gameController.rounds + 1).name}'s turn`;
-        console.log(gameController.gameover);
     };
     return { setMark, Reset };
 })();
@@ -81,11 +78,9 @@ const gameController = (() => {
 
 
     const playRound = (element) => {
-        console.log(gameover + " inside playround");
         if (!gameover) {
             gameBoard.setMark(element, element.dataset.i, element.dataset.j, getCurrentPlayer(rounds).mark, rounds);
             rounds++;
-            console.log(rounds);
         }
 
     };

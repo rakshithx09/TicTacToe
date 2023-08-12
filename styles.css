@@ -176,14 +176,8 @@
   .promptBox > div > label{
   margin-right: auto;
   }
-  /* .promptBox > div > input{
-    width: 25px;
-    height: 25px;
-    cursor:promptBox
-  } */
   
   .promptBox >div:last-of-type{
-    /*  border: 2px solid white; */
      width: 40%;
      background-color: var(--dark2);
      border-radius: 20px;
