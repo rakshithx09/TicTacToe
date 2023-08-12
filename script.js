@@ -55,7 +55,7 @@ const gameBoard = (() => {
         
         display.textContent = `${gameController.getCurrentPlayer(gameController.rounds + 1).name}'s turn`;
     };
-    return { setMark, Reset };
+    return { setMark, Reset  };
 })();
 
 
