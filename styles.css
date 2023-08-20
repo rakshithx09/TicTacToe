@@ -203,6 +203,9 @@
       align-items: center;
       background-color: var(--dark2);
     }
+    .tile:hover{
+      border-color: var(--highlight);
+    }
   
     @media only screen and (max-width:900px) {
      
