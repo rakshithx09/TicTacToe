@@ -100,6 +100,7 @@
     border: 2px solid black;
     width: 33.33333%;
     height: 33.34%;
+    position: relative;
   
   }
   .display{
@@ -205,6 +206,29 @@
     }
     .tile:hover{
       border-color: var(--highlight);
+    }
+
+    .tile > div.strike{
+      z-index: 50;
+      position: absolute;
+      width: 190px;
+      height: 2px;
+      background-color: var(--fontColor);
+      
+    }
+    .diagonal-strike2{
+      transform: rotate(45deg);
+    }
+    .diagonal-strike3{
+      transform: rotate(135deg);
+    }
+    .tile > div.vertical{
+      width: 158px;
+      transform: rotate(90deg);
+    }
+    .tile > div.horizontal{
+      width: 158px;
+      transform: rotate(0deg);
     }
   
     @media only screen and (max-width:900px) {

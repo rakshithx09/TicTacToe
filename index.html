@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
+
 <body>
   <div id="nav" class="nav">
     <h1>tic-tac-toe</h1>
@@ -22,40 +24,51 @@
 
   </div>
   <div class="display"></div>
-    <div class="board">
-      <div class="tile" data-i="0" data-j="0"></div>
-      <div class="tile" data-i="0" data-j="1"></div>
-      <div class="tile" data-i="0" data-j="2"></div>
-      <div class="tile" data-i="1" data-j="0"></div>
-      <div class="tile" data-i="1" data-j="1"></div>
-      <div class="tile" data-i="1" data-j="2"></div>
-      <div class="tile" data-i="2" data-j="0"></div>
-      <div class="tile" data-i="2" data-j="1"></div>
-      <div class="tile" data-i="2" data-j="2"></div>
+  <div class="board">
+    <div class="tile 0 0" data-i="0" data-j="0"><!-- <div class="strike diagonal-strike" id="diagonal-strike"></div> --></div>
+    <div class="tile 0 1" data-i="0" data-j="1"></div>
+    <div class="tile 0 2" data-i="0" data-j="2"></div>
+    <div class="tile 1 0" data-i="1" data-j="0"></div>
+    <div class="tile 1 1" data-i="1" data-j="1"></div>
+    <div class="tile 1 2" data-i="1" data-j="2"></div>
+    <div class="tile 2 0" data-i="2" data-j="0"></div>
+    <div class="tile 2 1" data-i="2" data-j="1"></div>
+    <div class="tile 2 2" data-i="2" data-j="2"></div>
+  </div>
+<!-- 
+  <div class="strike horizontal-strike" id="horizontal-strike"></div>
+  <div class="strike vertical-strike" id="vertical-strike"></div>
+  <div class="strike diagonal-strike" id="diagonal-strike"></div> -->
+
+  <div class="reset">
+    <h2>Reset</h2>
+  </div>
+
+
+  <div class="prompt">
+    <div class="promptBox">
+      <i class="fa fa-close" id="cross"></i>
+      <label for="player1Name">
+        <h2>Player 1's name:</h2>
+      </label>
+      <input type="text" id="player1Name" value="Batman">
+
+      <label for="player2Name">
+        <h2>Player 2's name:</h2>
+      </label>
+      <input type="text" id="player2Name" value="Superman">
+
+
+      <div class="play" id="play">
+        <h3>Play!</h3>
+      </div>
     </div>
 
-    <div class="reset"><h2>Reset</h2></div>
+  </div>
 
-
-    <div class="prompt">
-      <div class="promptBox">
-        <i class="fa fa-close" id="cross"></i>
-        <label for="player1Name">
-          <h2>Player 1's name:</h2>
-        </label>
-        <input type="text" id="player1Name" value="Batman">
-        
-        <label for="player2Name">
-          <h2>Player 2's name:</h2>
-        </label>
-        <input type="text" id="player2Name" value="Superman">
-        
-        
-        <div class="play" id="play"><h3>Play!</h3></div>
-        </div>
-        
-    </div>
-
-    <div class="copyright"><h3>Copyright &copy Rakshith Vijay</h3></div>
+  <div class="copyright">
+    <h3>Copyright &copy Rakshith Vijay</h3>
+  </div>
 </body>
+
 </html>
